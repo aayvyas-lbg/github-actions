@@ -4,9 +4,9 @@ on:
 jobs:
   get-comment:
     runs-on: ubuntu-latest
+    env:
+      COMMENT: ${{ github.event.issue.body }}
     steps:
       - name: "Getting Comments"
-        env:
-          COMMENT: ${{ github.event.issue.body }}
         run: |
           echo $COMMENT
