@@ -5,8 +5,8 @@ jobs:
   get-comment:
     runs-on: ubuntu-latest
     env:
-      COMMENT: ${{ github.event.issue.body }}
+      Comment: ${{ github.event.issue.body }}
     steps:
       - name: "Getting Comments"
         run: |
-          echo $COMMENT
+          echo "$Comment"
