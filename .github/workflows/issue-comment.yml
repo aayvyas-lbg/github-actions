@@ -1,0 +1,12 @@
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  get-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Getting Comments"
+        env:
+          COMMENT: ${{ github.event.issue.body }}
+        run: |
+          echo $COMMENT
